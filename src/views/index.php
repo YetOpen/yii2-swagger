@@ -1,6 +1,6 @@
 <?php
 
-use yii2mod\swagger\SwaggerAsset;
+use yetopen\swagger\SwaggerAsset;
 
 /* @var $this \yii\web\View */
 /* @var $restUrl string */
@@ -38,7 +38,7 @@ SwaggerAsset::register($this);
 
 <body>
 <?php $this->beginBody(); ?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+<svg xmlns="http://www.w3.org/2000/svg"
      style="position:absolute;width:0;height:0">
     <defs>
         <symbol viewBox="0 0 20 20" id="unlocked">

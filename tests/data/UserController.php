@@ -1,13 +1,13 @@
 <?php
 
-namespace yii2mod\swagger\tests\data;
+namespace yetopen\swagger\tests\data;
 
 use yii\rest\Controller;
 
 /**
  * Class UserController
  *
- * @package yii2mod\swagger\tests\data
+ * @package yetopen\swagger\tests\data
  */
 class UserController extends Controller
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace yii2mod\swagger\tests\actions;
+namespace yetopen\swagger\tests\actions;
 
 use Swagger\Annotations\Info;
 use Swagger\Annotations\Path;
+use yetopen\swagger\OpenAPIRenderer;
+use yetopen\swagger\tests\TestCase;
 use Yii;
 use yii\web\Response;
-use yii2mod\swagger\OpenAPIRenderer;
-use yii2mod\swagger\tests\TestCase;
 
 class OpenAPIRendererTest extends TestCase
 {
@@ -15,7 +15,7 @@ class OpenAPIRendererTest extends TestCase
     {
         $response = $this->runAction([
             'scanDir' => [
-                Yii::getAlias('@yii2mod/tests/unit/swagger/data'),
+                Yii::getAlias('@yetopen/tests/unit/swagger/data'),
             ],
         ]);
 
@@ -28,7 +28,7 @@ class OpenAPIRendererTest extends TestCase
     {
         $response = $this->runAction([
             'scanDir' => [
-                Yii::getAlias('@yii2mod/tests/unit/swagger/data'),
+                Yii::getAlias('@yetopen/tests/unit/swagger/data'),
             ],
         ]);
 
@@ -43,7 +43,7 @@ class OpenAPIRendererTest extends TestCase
     {
         $response = $this->runAction([
             'scanDir' => [
-                Yii::getAlias('@yii2mod/tests/unit/swagger/data'),
+                Yii::getAlias('@yetopen/tests/unit/swagger/data'),
             ],
             'cache' => null,
         ]);

@@ -1,20 +1,20 @@
 <?php
 
-namespace yii2mod\swagger;
+namespace yetopen\swagger;
 
 use yii\web\AssetBundle;
 
 /**
  * Class SwaggerAsset
  *
- * @package yii2mod\swagger
+ * @package yetopen\swagger
  */
 class SwaggerAsset extends AssetBundle
 {
     /**
      * @var string the directory that contains the source asset files for this asset bundle
      */
-    public $sourcePath = '@bower/swagger-ui/dist';
+    public $sourcePath = '@npm/swagger-ui-dist';
 
     /**
      * @var array list of JavaScript files that this bundle contains

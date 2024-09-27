@@ -1,8 +1,10 @@
 <?php
 
-namespace yii2mod\swagger;
+namespace yetopen\swagger;
 
-use Swagger\Annotations\Swagger;
+use OpenApi\Annotations\OpenApi;
+use OpenApi\Generator;
+use Symfony\Component\Finder\Finder;
 use Yii;
 use yii\base\Action;
 use yii\caching\Cache;
@@ -12,12 +14,12 @@ use yii\web\Response;
 /**
  * Class OpenAPIRenderer is responsible for generating the JSON spec.
  *
- * @package yii2mod\swagger\actions
+ * @package yetopen\swagger\actions
  */
 class OpenAPIRenderer extends Action
 {
     /**
-     * @var string|array|\Symfony\Component\Finder\Finder The directory(s) or filename(s).
+     * @var string|array|Finder The directory(s) or filename(s).
      * If you configured the directory must be full path of the directory.
      */
     public $scanDir;
@@ -73,16 +75,16 @@ class OpenAPIRenderer extends Action
     /**
      * Scan the filesystem for swagger annotations and build swagger-documentation.
      *
-     * @return Swagger
+     * @return OpenApi
      */
-    protected function getSwaggerDocumentation(): Swagger
+    protected function getSwaggerDocumentation(): OpenApi
     {
         if (!$this->cache instanceof Cache) {
-            return \Swagger\scan($this->scanDir, $this->scanOptions);
+            return Generator::scan($this->scanDir, $this->scanOptions);
         }
 
         return $this->cache->getOrSet($this->cacheKey, function () {
-            return \Swagger\scan($this->scanDir, $this->scanOptions);
+            return Generator::scan($this->scanDir, $this->scanOptions);
         }, $this->cacheDuration);
     }
 

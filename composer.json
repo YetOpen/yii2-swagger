@@ -1,5 +1,5 @@
 {
-    "name": "yii2mod/yii2-swagger",
+    "name": "yetopen/yii2-swagger",
     "description": "Swagger Documentation Generator for Yii2 Framework",
     "type": "yii2-extension",
     "keywords": [
@@ -12,13 +12,17 @@
         {
             "name": "Igor Chepurnoi",
             "email": "chepurnoi.igor@gmail.com"
+        },
+        {
+            "name": "YetOpen S.r.l.",
+            "email": "info@yetopen.com"
         }
     ],
     "require": {
-        "php": ">=7.1.0",
+        "php": ">=7.4.0",
         "yiisoft/yii2": "~2.0.12",
-        "zircote/swagger-php": "^2.0",
-        "bower-asset/swagger-ui": "^3.1"
+        "zircote/swagger-php": "^4.10.6",
+        "npm-asset/swagger-ui-dist": "^5.17"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "~2.0",
@@ -26,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "yii2mod\\swagger\\": ""
+            "yetopen\\swagger\\": "src"
         }
     },
     "repositories": [

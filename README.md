@@ -6,12 +6,9 @@
     <br>
 </p>
 
-Swagger/OpenAPI Documentation Generator for Yii2 Framework.
+This is a fork from https://github.com/yii2mod/yii2-swagger.
 
-[![Latest Stable Version](https://poser.pugx.org/yii2mod/yii2-swagger/v/stable)](https://packagist.org/packages/yii2mod/yii2-swagger)
-[![Total Downloads](https://poser.pugx.org/yii2mod/yii2-swagger/downloads)](https://packagist.org/packages/yii2mod/yii2-swagger)
-[![License](https://poser.pugx.org/yii2mod/yii2-swagger/license)](https://packagist.org/packages/yii2mod/yii2-swagger)
-[![Build Status](https://travis-ci.org/yii2mod/yii2-swagger.svg?branch=master)](https://travis-ci.org/yii2mod/yii2-swagger)
+Swagger/OpenAPI Documentation Generator for Yii2 Framework.
 
 Installation
 ------------
@@ -21,13 +18,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist yii2mod/yii2-swagger "*"
+php composer.phar require --prefer-dist yetopen/yii2-swagger "*"
 ```
 
 or add
 
 ```
-"yii2mod/yii2-swagger": "*"
+"yetopen/yii2-swagger": "*"
 ```
 
 to the require section of your composer.json.
@@ -62,11 +59,11 @@ class SiteController extends Controller
     {
         return [
             'docs' => [
-                'class' => 'yii2mod\swagger\SwaggerUIRenderer',
+                'class' => 'yetopen\swagger\SwaggerUIRenderer',
                 'restUrl' => Url::to(['site/json-schema']),
             ],
             'json-schema' => [
-                'class' => 'yii2mod\swagger\OpenAPIRenderer',
+                'class' => 'yetopen\swagger\OpenAPIRenderer',
                 // Тhe list of directories that contains the swagger annotations.
                 'scanDir' => [
                     Yii::getAlias('@app/controllers'),
@@ -179,7 +176,7 @@ http://localhost/path/to/index.php?r=site/docs
 ![Alt text](http://res.cloudinary.com/igor-chepurnoi/image/upload/v1507979787/Swagger_UI_ps89ih.png "Swagger Documentation")
 
 
-## Support us
+## Support Yii2mod
 
 Does your business depend on our contributions? Reach out and support us on [Patreon](https://www.patreon.com/yii2mod). 
 All pledges will be dedicated to allocating workforce on maintenance and new awesome stuff.
